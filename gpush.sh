@@ -12,9 +12,9 @@ if [ ! -z "$message" ]
 then
 git add .
 git commit -m "$message"
-git push origin $currentBranch
+pushResponse = $(git push origin $currentBranch)
 
-echo "Current changes is pushed to $currentBranch"
+echo "Current changes is pushed to $pushResponse"
 else
 echo "Please provide commit message"
 fi
